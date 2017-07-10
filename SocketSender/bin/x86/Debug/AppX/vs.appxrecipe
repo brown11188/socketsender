@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>B37A40A3FF08328CD3DA8FC93E04D93B69E4A4E207D5EF871FB7D3E13562716C</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>9058999DEEBC54AD4C2576AD0E8C96DC9C82A9671DFC09AB284A26A839DF1E2D</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>caf4aed0-b761-416e-b01f-5b5e067a605f_1.0.0.0_x86__mqb1rkwregmpa</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>caf4aed0-b761-416e-b01f-5b5e067a605f_mqb1rkwregmpa!App</RegisteredUserModeAppID>
     <RegisteredPackageID>caf4aed0-b761-416e-b01f-5b5e067a605f</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-07-10T07:31:13.071</Modified>
+      <Modified>2017-07-10T08:31:35.158</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\bin\x86\Debug\SocketSender.exe">
       <PackagePath>entrypoint\SocketSender.exe</PackagePath>
-      <Modified>2017-07-10T07:31:12.571</Modified>
+      <Modified>2017-07-10T08:31:34.654</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Harold\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -544,11 +544,11 @@
     <AppxPackagedFile Include="c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-07-10T07:31:12.905</Modified>
+      <Modified>2017-07-10T08:31:34.991</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\bin\x86\Debug\Core\SocketSender.exe">
       <PackagePath>SocketSender.exe</PackagePath>
-      <Modified>2017-07-10T07:31:13.068</Modified>
+      <Modified>2017-07-10T08:31:35.155</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

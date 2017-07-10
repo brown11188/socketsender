@@ -34,47 +34,39 @@ namespace SocketSender
             
         }
 
-        private async Task SendSocketMessage()
-        {
-
-            object outValue;
-            DataWriter writer;
-            if (!CoreApplication.Properties.TryGetValue("clientDataWriter", out outValue))
-            {
-                writer = new DataWriter(socket.OutputStream);
-                CoreApplication.Properties.Add("clientDataWriter", writer);
-            }
-            else
-            {
-                writer = (DataWriter)outValue;
-            }
-            string stringToSend = "Team tao la Mateo";
-            writer.WriteUInt32(writer.MeasureString(stringToSend));
-            writer.WriteString(stringToSend);
-
-            // Write the locally buffered data to the network.
-            try
-            {
-                await writer.StoreAsync();
-            }
-            catch (Exception exception)
-            {
-                // If this is an unknown status it means that the error if fatal and retry will likely fail.
-            }
-        }
-
         private async void Button_ClickAsync(object sender, RoutedEventArgs e)
         {
-            await SendSocketMessage();
-        }
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
-        {
+            try
+            {
+                //Create the StreamSocket and establish a connection to the echo server.
+                Windows.Networking.Sockets.StreamSocket socket = new Windows.Networking.Sockets.StreamSocket();
 
-            socket = new StreamSocket();
-            HostName hostName = new HostName("localhost");
-            socket.Control.KeepAlive = false;
-            await socket.ConnectAsync(hostName, "22112");
+                //The server hostname that we will be establishing a connection to. We will be running the server and client locally,
+                //so we will use localhost as the hostname.
+                Windows.Networking.HostName serverHost = new Windows.Networking.HostName("192.168.21.69");
+
+                //Every protocol typically has a standard port number. For example HTTP is typically 80, FTP is 20 and 21, etc.
+                //For the echo server/client application we will use a random port 1337.
+                string serverPort = "7777";
+                await socket.ConnectAsync(serverHost, serverPort);
+
+                //Write data to the echo server.
+                Stream streamOut = socket.OutputStream.AsStreamForWrite();
+                StreamWriter writer = new StreamWriter(streamOut);
+                string request = "test";
+                await writer.WriteLineAsync(request);
+                await writer.FlushAsync();
+
+                //Read data from the echo server.
+                Stream streamIn = socket.InputStream.AsStreamForRead();
+                StreamReader reader = new StreamReader(streamIn);
+                string response = await reader.ReadLineAsync();
+            }
+            catch (Exception ex)
+            {
+                //Handle exception here.            
+            }
         }
     }
 }
