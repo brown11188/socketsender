@@ -9,5 +9,6 @@
 
     <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Button Content="Send" Width="80" Click="Button_ClickAsync"/>
+        <TextBlock x:Name="Result" />
     </StackPanel>
 </Page>

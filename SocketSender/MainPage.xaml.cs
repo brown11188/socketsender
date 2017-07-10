@@ -62,6 +62,7 @@ namespace SocketSender
                 Stream streamIn = socket.InputStream.AsStreamForRead();
                 StreamReader reader = new StreamReader(streamIn);
                 string response = await reader.ReadLineAsync();
+                Result.Text = response;
             }
             catch (Exception ex)
             {
