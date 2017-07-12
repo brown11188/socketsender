@@ -1,1 +1,1 @@
-c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\SocketSender.csproj;x86
+C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\SocketSender.csproj;x86

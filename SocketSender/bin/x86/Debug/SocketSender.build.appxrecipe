@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>caf4aed0-b761-416e-b01f-5b5e067a605f</PackageIdentityName>
     <PackageIdentityPublisher>CN=Harold</PackageIdentityPublisher>
-    <IntermediateOutputPath>c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\bin\x86\Debug\SocketSender.exe">
+    <AppxPackagedFile Include="C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\bin\x86\Debug\SocketSender.exe">
       <PackagePath>entrypoint\SocketSender.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Harold\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
@@ -370,47 +370,47 @@
     <AppxPackagedFile Include="C:\Users\Harold\.nuget\packages\System.Xml.XmlSerializer\4.0.11\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\bin\x86\Debug\SocketSender.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\bin\x86\Debug\SocketSender.xr.xml">
       <PackagePath>SocketSender.xr.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\bin\x86\Debug\Core\SocketSender.exe">
+    <AppxPackagedFile Include="C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\bin\x86\Debug\Core\SocketSender.exe">
       <PackagePath>SocketSender.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

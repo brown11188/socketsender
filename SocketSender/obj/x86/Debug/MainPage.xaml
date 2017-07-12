@@ -9,6 +9,7 @@
 
     <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Button x:ConnectionId='1' Content="Send" Width="80"                          />
+        <TextBlock x:ConnectionId='2' x:Name="Result" />
     </StackPanel>
 </Page>
 

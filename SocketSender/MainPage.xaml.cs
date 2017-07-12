@@ -17,6 +17,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Mateo.UILogic.SocketMessage;
+using Newtonsoft.Json;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -44,17 +46,25 @@ namespace SocketSender
 
                 //The server hostname that we will be establishing a connection to. We will be running the server and client locally,
                 //so we will use localhost as the hostname.
-                Windows.Networking.HostName serverHost = new Windows.Networking.HostName("192.168.21.69");
+                Windows.Networking.HostName serverHost = new Windows.Networking.HostName("113.160.225.76");
 
                 //Every protocol typically has a standard port number. For example HTTP is typically 80, FTP is 20 and 21, etc.
                 //For the echo server/client application we will use a random port 1337.
-                string serverPort = "7777";
+                string serverPort = "2099";
                 await socket.ConnectAsync(serverHost, serverPort);
 
                 //Write data to the echo server.
                 Stream streamOut = socket.OutputStream.AsStreamForWrite();
                 StreamWriter writer = new StreamWriter(streamOut);
-                string request = "test";
+                CommandMessage message =  new CommandMessage()
+                {
+                    CommandType = "MotorStartCommand",
+                    Message = "Start",
+                    TimeStamp = DateTime.UtcNow.ToString(),
+                    CompanyName = "Enclave",
+                    Username = "Harold"
+                };
+                string request = JsonConvert.SerializeObject(message);
                 await writer.WriteLineAsync(request);
                 await writer.FlushAsync();
 
