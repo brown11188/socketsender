@@ -8,6 +8,8 @@
     mc:Ignorable="d">
 
     <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Button Width="80" Click="ButtonBase_OnClick">Connect to Server</Button>
+        <Button Width="80" Click="Upgrade_Click">Upgrade</Button>
         <Button Content="Send" Width="80" Click="Button_ClickAsync"/>
         <TextBlock x:Name="Result" />
     </StackPanel>

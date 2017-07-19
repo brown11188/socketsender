@@ -8,8 +8,10 @@
     mc:Ignorable="d">
 
     <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:ConnectionId='1' Content="Send" Width="80"                          />
-        <TextBlock x:ConnectionId='2' x:Name="Result" />
+        <Button x:ConnectionId='1' Width="80"                           >Connect to Server</Button>
+        <Button x:ConnectionId='2' Width="80"                      >Upgrade</Button>
+        <Button x:ConnectionId='3' Content="Send" Width="80"                          />
+        <TextBlock x:ConnectionId='4' x:Name="Result" />
     </StackPanel>
 </Page>
 

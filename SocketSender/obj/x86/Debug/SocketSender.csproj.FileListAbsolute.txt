@@ -210,3 +210,14 @@ c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\
 c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\obj\x86\Debug\qualifiers.txt.intermediate
 c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 c:\users\harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\bin\x86\Debug\System.Console.dll
+C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\bin\x86\Debug\System.ComponentModel.Primitives.dll
+C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\bin\x86\Debug\System.ComponentModel.TypeConverter.dll
+C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\bin\x86\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\bin\x86\Debug\System.Runtime.Serialization.Formatters.dll
+C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\obj\x86\Debug\FxResources.System.Console.SR.resw
+C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\obj\x86\Debug\FxResources.System.ComponentModel.Primitives.SR.resw
+C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\obj\x86\Debug\FxResources.System.ComponentModel.TypeConverter.SR.resw
+C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\obj\x86\Debug\FxResources.System.Runtime.InteropServices.RuntimeInformation.SR.resw
+C:\Users\Harold\documents\visual studio 2017\Projects\SocketSender\SocketSender\obj\x86\Debug\FxResources.System.Runtime.Serialization.Formatters.SR.resw

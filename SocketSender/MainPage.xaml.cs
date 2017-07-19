@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Networking;
 using Windows.Networking.Sockets;
+using Windows.Security.Cryptography.Certificates;
 using Windows.Storage.Streams;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -41,19 +43,8 @@ namespace SocketSender
 
             try
             {
-                //Create the StreamSocket and establish a connection to the echo server.
-                Windows.Networking.Sockets.StreamSocket socket = new Windows.Networking.Sockets.StreamSocket();
-
-                //The server hostname that we will be establishing a connection to. We will be running the server and client locally,
-                //so we will use localhost as the hostname.
-                Windows.Networking.HostName serverHost = new Windows.Networking.HostName("113.160.225.76");
-
-                //Every protocol typically has a standard port number. For example HTTP is typically 80, FTP is 20 and 21, etc.
-                //For the echo server/client application we will use a random port 1337.
-                string serverPort = "2099";
-                await socket.ConnectAsync(serverHost, serverPort);
-
                 //Write data to the echo server.
+                //DataWriter writer = new DataWriter(socket.OutputStream);
                 Stream streamOut = socket.OutputStream.AsStreamForWrite();
                 StreamWriter writer = new StreamWriter(streamOut);
                 CommandMessage message =  new CommandMessage()
@@ -65,8 +56,25 @@ namespace SocketSender
                     Username = "Harold"
                 };
                 string request = JsonConvert.SerializeObject(message);
+                //writer.WriteUInt32(writer.MeasureString(request));
+                //writer.WriteString(request);
+
+                //try
+                //{
+                //    await writer.StoreAsync();
+                //}
+                //catch (Exception exception)
+                //{
+                //    // If this is an unknown status it means that the error if fatal and retry will likely fail.
+                //    if (SocketError.GetStatus(exception.HResult) == SocketErrorStatus.Unknown)
+                //    {
+                //        throw;
+                //    }
+
+                //}
+
                 await writer.WriteLineAsync(request);
-                await writer.FlushAsync();
+                await writer.FlushAsync().ConfigureAwait(true);
 
                 //Read data from the echo server.
                 Stream streamIn = socket.InputStream.AsStreamForRead();
@@ -77,6 +85,94 @@ namespace SocketSender
             catch (Exception ex)
             {
                 //Handle exception here.            
+            }
+        }
+
+        private HostName serverHost;
+
+        private async void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //Create the StreamSocket and establish a connection to the echo server.
+                socket = new StreamSocket();
+
+                //The server hostname that we will be establishing a connection to. We will be running the server and client locally,
+                //so we will use localhost as the hostname.
+                serverHost = new HostName("113.160.225.76");
+
+                string serverPort = "2099";
+                await socket.ConnectAsync(serverHost, serverPort);
+
+                //string certInformation = GetCertificateInformation(
+                //    socket.Information.ServerCertificate,
+                //    socket.Information.ServerIntermediateCertificates);
+                //Result.Text = certInformation;
+            }
+            catch (Exception exception)
+            {
+                // If this is an unknown status it means that the error is fatal and retry will likely fail.
+                if (SocketError.GetStatus(exception.HResult) == SocketErrorStatus.Unknown)
+                {
+                    throw;
+                }
+
+                // Could retry the connection, but for this simple example
+                // just close the socket.
+
+                socket.Dispose();
+                socket = null;
+            }
+        }
+
+        private string GetCertificateInformation(
+            Certificate serverCert,
+            IReadOnlyList<Certificate> intermediateCertificates)
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+
+            stringBuilder.AppendLine("\tFriendly Name: " + serverCert.FriendlyName);
+            stringBuilder.AppendLine("\tSubject: " + serverCert.Subject);
+            stringBuilder.AppendLine("\tIssuer: " + serverCert.Issuer);
+            stringBuilder.AppendLine("\tValidity: " + serverCert.ValidFrom + " - " + serverCert.ValidTo);
+
+            // Enumerate the entire certificate chain.
+            if (intermediateCertificates.Count > 0)
+            {
+                stringBuilder.AppendLine("\tCertificate chain: ");
+                foreach (var cert in intermediateCertificates)
+                {
+                    stringBuilder.AppendLine("\t\tIntermediate Certificate Subject: " + cert.Subject);
+                }
+            }
+            else
+            {
+                stringBuilder.AppendLine("\tNo certificates within the intermediate chain.");
+            }
+
+            return stringBuilder.ToString();
+        }
+
+        private async void Upgrade_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Try to upgrade to SSL
+                await socket.UpgradeToSslAsync(SocketProtectionLevel.Tls12, serverHost);
+
+            }
+            catch (Exception exception)
+            {
+                // If this is an unknown status it means that the error is fatal and retry will likely fail.
+                if (SocketError.GetStatus(exception.HResult) == SocketErrorStatus.Unknown)
+                {
+                    throw;
+                }
+
+
+                socket.Dispose();
+                socket = null;
+                return;
             }
         }
     }

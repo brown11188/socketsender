@@ -13,7 +13,7 @@ namespace Mateo.UILogic.SocketMessage
         public string Username;
         [JsonProperty(PropertyName = "command_type")]
         public string CommandType;
-        [JsonProperty(PropertyName = "username")]
+        [JsonProperty(PropertyName = "message")]
         public string Message;
         [JsonProperty(PropertyName = "company_name")]
         public string CompanyName;
